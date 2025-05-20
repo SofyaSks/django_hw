@@ -7,7 +7,7 @@
 <h1>{{posts.1.title}}</h1>
 <p>{{posts.1.text}}</p> -->
 
-{% for p in posts %}
+<!-- {% for p in posts %}
     {%if p.title != null%}
         <h1>{{p.title}}</h1>
         <ol>
@@ -16,4 +16,15 @@
     {%endif%}
 
 
-{% endfor %}
+{% endfor %} -->
+
+<h1>All posts {{author}}</h1>
+{{data}}
+<h2>First post</h2>
+<p>{{data.0}}</p>
+<ul>
+    {%for article in data%}
+        <li> Запись № {{forloop.counter}}
+            <b>{{article.dt}}</b>: <em>{{article}}</em> - {{article.text}}</li>
+    {%endfor%}
+</ul>
