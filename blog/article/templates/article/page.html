@@ -18,13 +18,27 @@
 
 {% endfor %} -->
 
-<h1>All posts {{author}}</h1>
-{{data}}
-<h2>First post</h2>
-<p>{{data.0}}</p>
-<ul>
+{% load static %}
+
+<img src={% static 'article/cat.png' %}>
+<link rel="stylesheet" href={% static 'article/style.css' %}>
+
+<h1>Автор постов: {{user}}</h1>
+
+
+<ul> 
     {%for article in data%}
-        <li> Запись № {{forloop.counter}}
-            <b>{{article.dt}}</b>: <em>{{article}}</em> - {{article.text}}</li>
+        <div class="div_art">
+            <li> 
+                <div class="art_main_text">
+                    <h2>{{article}}</h2>  
+                    <p class="art_text">{{article.text}}</p>
+                </div>
+            </li>
+                <p class="art_date"><b>{{article.dt}}</b></p>
+        </div>
     {%endfor%}
+    
 </ul>
+
+<!-- Запись № {{forloop.counter}} -->

@@ -1,0 +1,50 @@
+html{
+    font-size: 24px;
+}
+
+h1{
+    color: rgb(103, 178, 204);
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(42, 115, 139);
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+div{
+    width: 25vw;
+}
+
+.div_art{
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.art_main_text{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: aliceblue;
+}
+
+.art_date{
+    text-align: center;
+}
+
+.art_text{
+    text-align: center;
+}
