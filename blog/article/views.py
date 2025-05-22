@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import models
+from datetime import datetime
 # def article(request):
 #     context = {  # Это словарь контекста, он целиком передается в страницу-шаблон
 #         'posts': [ # Это список, в нем содержится много постов, которые блоггер запостил в блог
@@ -27,10 +28,12 @@ from . import models
 #         context
 #     )
 
-def article(request):
+def article(request, uid):
     context = {
         'author': 'Я',
-        'data': models.Article.objects.all(),
+        # 'data': models.Article.objects.filter(dt__lt = datetime(2025,5,21)),
+        # 'data': models.Article.objects.all(),
+        'data': models.Article.objects.filter(user_id = uid),
     }
     return render(
         request,
