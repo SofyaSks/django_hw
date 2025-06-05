@@ -57,3 +57,9 @@ def new_article (request):
         'article/new_article.html',
         context
     )
+
+def myfetch(request):
+    return render(
+        request,
+        'article/myfetch.html'
+    )
