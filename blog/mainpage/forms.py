@@ -41,3 +41,5 @@ class UserLoginForm(forms.Form):
             'password': 'Пароль'
         }
 
+
+

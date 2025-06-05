@@ -9,3 +9,14 @@ class BlogPostForm(forms.ModelForm):
             'title',
             'text'
         ]
+
+        # labels = {
+        #   'user': 'Пользователь',
+        #   'title': 'Заголовок',
+        #   'text': 'Содержимое',  
+        # }
+
+        # widgets = {
+        #     'dt': forms.DateInput(attrs={'type': 'datetime-local'}),
+        #     'color': forms.TextInput(attrs={'type':'color'}),
+        # }
