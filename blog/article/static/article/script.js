@@ -1,14 +1,9 @@
-
-
 window.addEventListener(
     'load',
     Main
 )
 
 function Main(){
-
-
-
 let btn = document.querySelector('button')
 
 btn.addEventListener(

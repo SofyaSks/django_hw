@@ -63,3 +63,9 @@ def myfetch(request):
         request,
         'article/myfetch.html'
     )
+
+def multTable(request):
+    return render(
+        request,
+        'article/mult_table.html'
+    )
