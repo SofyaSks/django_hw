@@ -1,0 +1,14 @@
+{% extends 'mainpage/main.html' %}
+{% block content %}
+{% load static %}
+<script src={% static 'article/get_new_posts.js' %}> </script>
+<link rel="stylesheet" href={% static 'article/style.css' %}>
+{% for p in posts %}
+<div class="div_article" >
+    <h1>{{ p.title }} опубликовал {{ p.user }} {{ p.dt }} 
+        <span class="edit_div"><button class="edit"><img src={% static 'article/edit.png'%} ></button></span></h1>
+    <p>{{ p.text }}</p>
+    <button class="save" >OK</button>
+</div>
+{% endfor %}
+{% endblock %}

@@ -12,5 +12,9 @@ class Article(models.Model):
         return self.title
     
    
+class Subscriptions(models.Model):
+    follower = models.ForeignKey(User, default=None, related_name='follower', on_delete=models.CASCADE)
+    following = models.ForeignKey(User, default=None, related_name='following', on_delete=models.CASCADE)
+    
 
 

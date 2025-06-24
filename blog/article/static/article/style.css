@@ -4,6 +4,9 @@ html{
 
 h1{
     color: rgb(103, 178, 204);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 h2{
@@ -47,4 +50,27 @@ div{
 
 .art_text{
     text-align: center;
+}
+
+.edit{
+    /* background: none;
+    border: none;
+    cursor: pointer; */
+}
+
+.edit_div{
+    width: 20px;
+    height: 20px;
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+
+.div_article{
+    width: 90vw;
+}
+
+.save{
+    visibility: hidden;
 }

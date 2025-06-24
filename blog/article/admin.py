@@ -6,3 +6,7 @@ from . import models
 @admin.register(models.Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ['dt', 'title', 'user']
+
+@admin.register(models.Subscriptions)
+class SubscriptionAdmin(admin.ModelAdmin):
+    list_display = ['follower', 'following']

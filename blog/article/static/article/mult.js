@@ -13,7 +13,7 @@ function Main(){
         'click',
         () => {
             
-            let num = document.querySelector('input').value
+            let num = document.querySelector('input').valueAsNumber
             document.querySelector('input').value = ''
 
             fetch(url_add).then(
