@@ -1,6 +1,8 @@
 import asyncio     
 from aiogram import Bot, Dispatcher  
 from aiogram.filters import Command
+from datetime import datetime
+import time
  
 import os  
 
@@ -28,14 +30,26 @@ async def command_start_handler(message):
     print('Ура! Мне написал', message.chat.id)
     await message.answer(
         "Я веду канал космических событий! https://t.me/n_esse")
-    
+
+# Разбуди меня во время 
 @dp.message(Command("writeme"))
 async def command_writeme_handler(message):
     text = message.text
     texts = text.split(' ')
-    print(texts)
-    await message.answer('Вы попросили разбудить вас в ' + texts[1] + ' ' + texts[2])
+    text_date = str(texts[1]).split('-')
+    text_time = str(texts[2]).split(':')
 
+    date = datetime(int(text_date[0]), int(text_date[1]), int(text_date[2]), 
+                    int(text_time[0]), int(text_time[1]))
+    now_date = datetime.now()
+    
+    total_time = (date - now_date).total_seconds()
+
+    await message.answer(f'Вы попросили разбудить вас в {str(date)}' )
+    time.sleep(total_time)
+    await message.answer(f'Бужу вас!' )
+
+# Вывод заголовков из Article
 @dp.message(Command("whatsnew"))
 async def command_start_handler(message):
     data = await get_data()
